@@ -49,7 +49,7 @@ const questions = [
 const roles = {
   daiyu: {
     name: "林黛玉",
-    img: "../../金陵十二钗/image/林黛玉.png",
+    img: "../../金陵十二钗/image/lindaiyu.png",
     desc: `
       <strong>判词：</strong><br>
       情深不寿，慧极必伤。<br>
