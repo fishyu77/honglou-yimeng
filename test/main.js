@@ -66,7 +66,7 @@ const roles = {
   },
   baochai: {
     name: "薛宝钗",
-    img: "https://raw.githubusercontent.com/fishyu77/honglou-yimeng/main/shierchai/xuebaochai.png",
+    img: "../shierchai/xuebaochai.png",
     desc: `
       <strong>判词：</strong><br>
       人皆称你稳妥圆融，却少有人问你是否甘心。<br>
@@ -100,7 +100,7 @@ const roles = {
   },
   fengjie: {
     name: "王熙凤",
-    img: "https://raw.githubusercontent.com/fishyu77/honglou-yimeng/main/shierchai/wangxifeng.png",
+    img: "../shierchai/wangxifeng.png",
     desc: `
       <strong>判词：</strong><br>
       心狠手稳，最像赢家，<br>
