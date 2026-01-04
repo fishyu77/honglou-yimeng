@@ -49,7 +49,7 @@ const questions = [
 const roles = {
   daiyu: {
     name: "林黛玉",
-    img: "../shierchai/lindaiyu.png",
+    img: "../shierchai/林黛玉.png",
     desc: `
       <strong>判词：</strong><br>
       情深不寿，慧极必伤。<br>
@@ -66,7 +66,7 @@ const roles = {
   },
   baochai: {
     name: "薛宝钗",
-    img: "../shierchai/xuebaochai.png",
+    img: "../shierchai/薛宝钗.png",
     desc: `
       <strong>判词：</strong><br>
       人皆称你稳妥圆融，却少有人问你是否甘心。<br>
@@ -83,7 +83,7 @@ const roles = {
   },
   baoyu: {
     name: "贾宝玉",
-    img: "../shierchai/jiabaoyu.png",
+    img: "../shierchai/贾宝玉.png",
     desc: `
       <strong>判词：</strong><br>
       你厌恶功名，却身处其中。<br>
@@ -100,7 +100,7 @@ const roles = {
   },
   fengjie: {
     name: "王熙凤",
-    img: "../shierchai/wangxifeng.png",
+    img: "../shierchai/王熙凤.png",
     desc: `
       <strong>判词：</strong><br>
       心狠手稳，最像赢家，<br>
