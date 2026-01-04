@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>红楼人物性格测试</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- 封面 -->
+<section id="start" class="page active">
+  <h1>如果你走进大观园</h1>
+  <p class="intro">
+    三百年前的命运，<br>
+    并没有随着小说结束。
+  </p>
+  <p class="hint">
+    这不是性格测试，<br>
+    而是一场关于你如何被世界对待的推演。
+  </p>
+  <button onclick="startTest()">进入大观园</button>
+</section>
+
+
+<!-- 题目页 -->
+<section id="quiz" class="page">
+  <div id="progress"></div>
+  <h2 id="question"></h2>
+  <div id="options"></div>
+</section>
+
+<!-- 结果页 -->
+<section id="result" class="page">
+  <h2 id="roleName"></h2>
+
+  <p class="role-subtitle">
+    这是你在大观园中的位置
+  </p>
+
+  <img id="roleImg" class="role-img" alt="人物图片">
+
+  <p id="roleDesc"></p>
+
+  <p class="role-reflection">
+    这不是你的选择，<br>
+    而是这个结构最可能给你的安排。
+  </p>
+
+  <button onclick="goNext()">继续向前</button>
+</section>
+<!-- 现代社会映射区 -->
+<section id="society" class="page">
+  <h2 id="societyTitle"></h2>
+
+  <p id="societyIntro"></p>
+
+  <ul id="societyPoints"></ul>
+
+  <p class="society-end">
+    这不是你的问题，<br>
+    而是这个时代反复制造的结果。
+  </p>
+  <button onclick="goEnding()">面对结局</button>
+</section>
+
+<!-- 最终反思页 -->
+<section id="ending" class="page ending">
+  <div class="ending-content">
+    <p class="ending-summary">
+      红楼一梦，终归是客。<br>
+      当大雪落下，白茫茫一片真干净时，<br>
+      你是否找到了自己的归处？
+    </p>
+    
+    <div class="ending-actions">
+      <button onclick="restart()">回到最初</button>
+      <button class="silent-btn" onclick="staySilent()">什么也不做</button>
+    </div>
+  </div>
+</section>
+
+
+<script src="main.js"></script>
+<script>
+    // 监听点击事件，通知父窗口播放音乐
+    document.addEventListener('click', function() {
+        try {
+            window.parent.postMessage('play-music', '*');
+        } catch (e) {
+            console.log('PostMessage failed', e);
+        }
+    });
+</script>
+</body>
+
+</html>

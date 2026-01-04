@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红楼一梦 - 曹雪芹与时代的命运样本</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- 配置Tailwind自定义颜色 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'crimson': '#8B0000',
+                        'ink': '#1A1A1A',
+                        'rice': '#F5F0E6',
+                        'gold': '#D4AF37',
+                        'jade': '#7BCB9F',
+                    },
+                    fontFamily: {
+                        'song': ['"Noto Serif SC"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen">
+    <!-- 进度条 -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 bg-rice/90 backdrop-blur-sm z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="text-crimson font-bold text-xl flex items-center">
+                    <i class="fas fa-book-open mr-2"></i>红楼一梦
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="#intro" class="nav-item text-ink hover:text-crimson transition-colors">引言</a>
+                    <a href="#author" class="nav-item text-ink hover:text-crimson transition-colors">作者曹雪芹</a>
+                    <a href="#background" class="nav-item text-ink hover:text-crimson transition-colors">时代背景</a>
+                    <a href="#conclusion" class="nav-item text-ink hover:text-crimson transition-colors">收尾</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-ink focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端菜单 -->
+            <div id="mobileMenu" class="md:hidden mt-3 hidden">
+                <div class="flex flex-col space-y-2">
+                    <a href="#intro" class="nav-item text-ink hover:text-crimson py-2 transition-colors">引言</a>
+                    <a href="#author" class="nav-item text-ink hover:text-crimson py-2 transition-colors">作者曹雪芹</a>
+                    <a href="#background" class="nav-item text-ink hover:text-crimson py-2 transition-colors">时代背景</a>
+                    <a href="#twelve-beauties" class="nav-item text-ink hover:text-crimson py-2 transition-colors">金陵十二钗</a>
+                    <a href="#conclusion" class="nav-item text-ink hover:text-crimson py-2 transition-colors">收尾</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 装饰元素 -->
+    <div class="scroll-decoration top-20 left-10 w-64 h-64">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,50 Q35,20 50,50 T80,50" stroke="#8B0000" stroke-width="1" fill="none"/>
+            <path d="M20,60 Q35,30 50,60 T80,60" stroke="#8B0000" stroke-width="1" fill="none"/>
+        </svg>
+    </div>
+    
+    <div class="scroll-decoration bottom-20 right-10 w-64 h-64">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20,50 Q35,20 50,50 T80,50" stroke="#8B0000" stroke-width="1" fill="none"/>
+            <path d="M20,60 Q35,30 50,60 T80,60" stroke="#8B0000" stroke-width="1" fill="none"/>
+        </svg>
+    </div>
+    
+    <!-- 头部 -->
+    <header class="relative py-16 px-4 md:py-24 text-center">
+        <div class="key-pattern absolute top-0 left-0 right-0"></div>
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-3xl md:text-5xl font-bold text-crimson mb-6 fade-in">红楼一梦</h1>
+            <p class="text-xl md:text-2xl text-ink mb-12 fade-in">曹雪芹与时代的命运样本</p>
+            
+            <!-- 红楼梦插图 -->
+            <div class="traditional-border rounded-lg overflow-hidden mb-12 max-w-2xl mx-auto fade-in">
+                <img src="https://s.coze.cn/image/P_F5X1qFbjo/" alt="红楼梦场景" class="w-full h-auto">
+            </div>
+        </div>
+        <div class="key-pattern absolute bottom-0 left-0 right-0 transform rotate-180"></div>
+    </header>
+    
+    <!-- 主要内容 -->
+    <main class="container mx-auto max-w-4xl px-4 py-8">
+        <!-- 引言部分 -->
+        <section id="intro" class="mb-16 fade-in">
+            <div class="traditional-border rounded-lg p-6 md:p-8 bg-rice/80 cloud-pattern">
+                <h2 class="text-2xl md:text-3xl font-bold text-crimson mb-6">引言：为何是曹雪芹，为何是那个时代？</h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    你即将走进的"红楼一梦"，不是虚构寓言，而是曹雪芹用半生血泪刻下的时代命运样本。他与笔下大观园众人一样，活在"选择早已注定"的结构里。读懂他与他的时代，才能看懂这场梦的现实回响。
+                </p>
+            </div>
+        </section>
+        
+        <!-- 作者曹雪芹部分 -->
+        <section id="author" class="mb-16 fade-in">
+            <div class="traditional-border rounded-lg p-6 md:p-8 bg-rice/80 cloud-pattern">
+                <h2 class="text-2xl md:text-3xl font-bold text-crimson mb-6">一、作者曹雪芹：在繁华落尽里，看清结构的真相</h2>
+                
+                <div class="flex flex-col md:flex-row gap-8 mb-8">
+                    <div class="md:w-1/2">
+                        <p class="text-lg leading-relaxed mb-4">
+                            曹雪芹的一生就是微型《红楼梦》：出身显赫的江宁织造府，家族荣光如贾府般为他铺定既定轨道。
+                        </p>
+                        <p class="text-lg leading-relaxed mb-4">
+                            雍正年间曹家因政治风波抄家，他从贵族公子沦为落魄文人。这段经历让他看清残酷真相：个人荣辱从非努力或性格决定，而是被时代结构牢牢捆绑。
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            他以“批阅十载，增删五次”的执着写下《红楼梦》，借大观园兴衰与众人结局，警示后人：固化结构中，每个人的命运早已写定。
+                        </p>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="traditional-border rounded-lg overflow-hidden h-full">
+                            <img src="https://s.coze.cn/image/IXTZChhIiFU/" alt="曹雪芹肖像" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote text-lg text-ink/80 pl-6 border-l-4 border-crimson/30 italic">
+                    “满纸荒唐言，一把辛酸泪。都云作者痴，谁解其中味？”
+                </div>
+            </div>
+        </section>
+        
+        <!-- 时代背景部分 -->
+        <section id="background" class="mb-16 fade-in">
+            <div class="traditional-border rounded-lg p-6 md:p-8 bg-rice/80 cloud-pattern">
+                <h2 class="text-2xl md:text-3xl font-bold text-crimson mb-6">二、时代背景：乾隆盛世下的"结构性困局"</h2>
+                <p class="text-lg leading-relaxed mb-8">
+                    《红楼梦》创作于乾隆盛世顶峰，表面繁华下藏着阶层固化、规则僵化的结构性困局——这正是我们今日仍能感同身受的现实底色。
+                </p>
+                
+                <!-- 折叠面板1：阶层固化 -->
+                <div class="mb-6">
+                    <button class="collapse-btn w-full flex justify-between items-center p-4 bg-rice border border-crimson/30 rounded-lg hover:bg-crimson/5 transition-colors" data-target="collapse1">
+                        <h3 class="text-xl font-semibold text-crimson">1. 阶层固化</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    
+                    <div id="collapse1" class="collapse-content mt-2 pl-4 pr-4 pb-4">
+                        <p class="text-lg leading-relaxed">
+                            乾隆年间封建等级森严，贵族与平民鸿沟难越，“出生定阶层，阶层定命运”是铁律。这与当下教育内卷、阶层跨越困境本质相通。
+                        </p>
+                        <div class="mt-4 p-4 bg-crimson/5 rounded-lg">
+                            <p class="text-ink/80 italic">
+                                “刘姥姥进大观园”的情节，正是这种阶层鸿沟的生动写照——一个底层农妇面对贵族生活的震撼与无措，折射出等级制度对人性的异化。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 折叠面板2：规则僵化 -->
+                <div class="mb-6">
+                    <button class="collapse-btn w-full flex justify-between items-center p-4 bg-rice border border-crimson/30 rounded-lg hover:bg-crimson/5 transition-colors" data-target="collapse2">
+                        <h3 class="text-xl font-semibold text-crimson">2. 规则僵化</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    
+                    <div id="collapse2" class="collapse-content mt-2 pl-4 pr-4 pb-4">
+                        <p class="text-lg leading-relaxed">
+                            家族利益优先、等级不可逾越的生存规则，容不下异类——宝钗迎合获认可，黛玉反抗终悲剧。这恰如当下成功学、评价体系对我们的束缚。
+                        </p>
+                        <div class="mt-4 p-4 bg-crimson/5 rounded-lg">
+                            <p class="text-ink/80 italic">
+                                黛玉的“孤高自许，目无下尘”与宝钗的“随分从时，装愚守拙”，两种生存策略的不同结局，揭示了僵化规则下个体的无力与挣扎。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 折叠面板3：盛世幻象 -->
+                <div class="mb-6">
+                    <button class="collapse-btn w-full flex justify-between items-center p-4 bg-rice border border-crimson/30 rounded-lg hover:bg-crimson/5 transition-colors" data-target="collapse3">
+                        <h3 class="text-xl font-semibold text-crimson">3. 盛世幻象</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    
+                    <div id="collapse3" class="collapse-content mt-2 pl-4 pr-4 pb-4">
+                        <p class="text-lg leading-relaxed">
+                            乾隆盛世的虚假繁华下，贵族精神空虚、底层尊严尽失。这种物质繁华与精神荒芜并存的状态，恰似当下消费社会的精神内耗。
+                        </p>
+                        <div class="mt-4 p-4 bg-crimson/5 rounded-lg">
+                            <p class="text-ink/80 italic">
+                                "红楼梦十二曲"中的"好一似食尽鸟投林，落了片白茫茫大地真干净"，预言了这种表面繁华终将烟消云散的历史必然。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex justify-center">
+                    <div class="traditional-border rounded-lg overflow-hidden max-w-md">
+                        <img src="https://s.coze.cn/image/hb_R-b4wH3g/" alt="乾隆盛世对比图" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 金陵十二钗展示部分 -->
+        <section id="twelve-beauties" class="mb-16">
+            <div class="traditional-border rounded-lg p-6 md:p-8 bg-rice/80 cloud-pattern text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-crimson mb-6">金陵十二钗：千红一哭，万艳同悲</h2>
+                <p class="text-lg leading-relaxed mb-8">
+                    她们是这大观园中最绚烂的春色，也是这时代最无奈的落花。点击下方按钮，一览十二金钗的风华与命运。
+                </p>
+                <div class="flex justify-center">
+                    <a href="shierchai/index.html" class="pulse-glow bg-crimson text-white text-xl font-bold py-4 px-8 rounded-lg hover:bg-crimson/90 transition-colors focus:outline-none focus:ring-2 focus:ring-crimson/50 focus:ring-offset-2 no-underline">
+                        【赏鉴十二钗】
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 收尾部分 -->
+        <section id="conclusion" class="mb-16 fade-in">
+            <div class="traditional-border rounded-lg p-6 md:p-8 bg-rice/80 cloud-pattern">
+                <h2 class="text-2xl md:text-3xl font-bold text-crimson mb-6">【收尾：从时代到你我】</h2>
+                <p class="text-lg leading-relaxed mb-8">
+                    曹雪芹写《红楼梦》，是为揭露从未消失的真相：每个时代都有自己的"大观园"与"命运脚本"。接下来，你将在这场梦里看清：自己当下的生存状态，正是结构性困局的映射。准备好直面自己的"命运脚本"了吗？点击进入测试。
+                </p>
+                
+                <!-- 进入红楼一梦按钮 -->
+                <div class="flex justify-center">
+                    <button id="enterDreamBtn" class="pulse-glow bg-crimson text-white text-xl font-bold py-4 px-8 rounded-lg hover:bg-crimson/90 transition-colors focus:outline-none focus:ring-2 focus:ring-crimson/50 focus:ring-offset-2">
+                        【进入红楼一梦】
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-ink text-rice py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <div class="key-pattern mx-auto w-32 transform rotate-180 mb-4"></div>
+                <p class="text-rice/80">满纸荒唐言，一把辛酸泪</p>
+                <p class="text-rice/80">都云作者痴，谁解其中味</p>
+                <div class="key-pattern mx-auto w-32 mt-4"></div>
+            </div>
+            
+           
+ 
+        </div>
+    </footer>
+    
+    <script src="index.js"></script>
+    <script>
+        // 监听点击事件，通知父窗口播放音乐
+        document.addEventListener('click', function() {
+            try {
+                window.parent.postMessage('play-music', '*');
+            } catch (e) {
+                console.log('PostMessage failed', e);
+            }
+        });
+    </script>
+</body>
+</html>

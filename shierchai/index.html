@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红楼梦 - 金陵十二钗</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <a href="../home.html" class="garden-back">
+        <div class="border-outer" style="--corner-size: 10px; --border-width: 1px;">
+            <div class="border-inner" style="padding: 8px 16px;">
+                ← 退回大观园
+            </div>
+        </div>
+    </a>
+    <div class="cards">
+    <script>
+        // 监听点击事件，通知父窗口播放音乐
+        document.addEventListener('click', function() {
+            try {
+                window.parent.postMessage('play-music', '*');
+            } catch (e) {
+                console.log('PostMessage failed', e);
+            }
+        });
+    </script>
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src="./林黛玉.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">林黛玉</h2>
+					<div class="card-copy">
+						<h2>林黛玉</h2>
+						<h3>判词：可叹停机德，堪怜咏絮才。玉带林中挂，金簪雪里埋。</h3>
+						<p>人物介绍：林黛玉：前世为绛珠仙草，为报答神瑛侍者（贾宝玉前世）的灌溉之恩，随其下凡，用一生眼泪还他。她生性敏感、才思敏捷，冰雪聪明，极具诗人气质，工诗善词，在大观园诗社里的诗作常常技压群芳，如《葬花吟》“花谢花飞飞满天，红消香断有谁怜”，尽显灵秀才情。但寄人篱下的生活，加上体弱多病，使她多愁善感。与贾宝玉有着纯真的爱情，却因种种封建礼教的束缚，最终泪尽而逝。</p>
+					</div>
+
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="LinDaiyu" checked />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src=".//薛宝钗.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">薛宝钗</h2>
+					<div class="card-copy">
+						<h2>薛宝钗</h2>
+						<h3>判词：可叹停机德，堪怜咏絮才。玉带林中挂，金簪雪里埋。</h3>
+						<p>人物介绍：出身于四大家族的薛家，举止娴雅，博学宏览，恪守封建妇德。她热衷于 “仕途经济”，劝宝玉走 “仕途之路”。对长辈孝顺恭敬，对姐妹温和友善，善于处理人际关系，在贾府上下颇得人心。所作《螃蟹咏》“眼前道路无经纬，皮里春秋空黑黄”，暗藏机锋。最后虽与宝玉成婚，但宝玉出家后，独守空闺。</p>
+					</div>
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="XueBaochai" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src="./史湘云.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">史湘云</h2>
+					<div class="card-copy">
+						<h2>史湘云</h2>
+						<h3>判词：富贵又何为，襁褓之间父母违。展眼吊斜晖，湘江水逝楚云飞。</h3>
+						<p>人物介绍：贾母的侄孙女，心直口快，开朗豪爽，不拘小节。她自幼父母双亡，由叔权婶婶抚养长大，但生性豁达乐观。才情出众，诗思敏捷，在诗社中多次留下精彩的诗作，像《咏白海棠》“自是霜娥偏爱冷，非关倩女亦离魂”，洒脱自然。最后嫁得如意郎君，却好景不长，丈夫早逝，她孤苦度日。</p>
+					</div>
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="ShiXiangyun" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src=".//妙玉.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">妙玉</h2>
+					<div class="card-copy">
+						<h2>妙玉</h2>
+						<h3>判词：欲洁何曾洁，云空未必空。可怜金玉质，终陷淖泥中。</h3>
+						<p>人物介绍：苏州人氏，出身仕宦人家，因自幼多病，带发修行。她精通文墨，品位高雅，茶艺精湛，为人清高孤僻，不合时宜。她对宝玉有着特殊的情感，其诗如《中秋夜大观园即景联句》“钟鸣拢翠寺，鸡唱稻香村”（与众入联句所作），尽显清冷格调。但最终命运坎坷，在贼人抢劫大观园时遭掳走，下落不明。</p>
+					</div>
+
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="MiaoYu" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src="./李纨.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">李纨</h2>
+					<div class="card-copy">
+						<h2>李纨</h2>
+						<h3>判词：桃李春风结子完，到头谁似一盆兰。如冰水好空相妒，枉与他人作笑谈。</h3>
+						<p>人物介绍：荣国府长孙贾珠之妻，贾珠早亡，她青春守寡，心如 “槁木死灰”，但她恪守封建妇德，是标准的贤女节妇。她带领小姑子们在大观园中成立诗社，自己也有着一定的才情，诗如《杏帘在望》（虽为代作，体现其 “真”）“杏帘招客饮，在望有山庄”。贾府败落后，她因儿子贾兰科举中第，母凭子贵，过上了荣华富贵的生活，但很快便死去。</p>
+					</div>
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="LiWan" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src=".//王熙凤.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">王熙凤</h2>
+					<div class="card-copy">
+						<h2>王熙凤</h2>
+						<h3>判词：凡鸟偏从末世来，都知爱慕此生才。一从二令三人木，哭向金陵事更哀。</h3>
+						<p>人物介绍：贾琏之妻，精明能干，泼辣狠毒，有着非凡的管理才能和口才，是贾府的实际管理者。她善于权谋，弄权铁槛寺，为了私利不择手段；对上阿谀奉承，对下严厉苛刻。但机关算尽太聪明，反误了卿卿性命，最后在贾府败落时，凄凉死去。</p>
+					</div>
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="WangXifeng" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src="./秦可卿.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">秦可卿</h2>
+					<div class="card-copy">
+						<h2>秦可卿</h2>
+						<h3>判词：情天情海幻情身，情既相逢必主淫。漫言不肖皆荣出，造衅开端实在宁。</h3>
+						<p>人物介绍：贾蓉之妻，是宁国府贾敬的儿媳。长得袅娜纤巧，性格风流，行事温柔和平，深得贾母等人的欢心。但她与公公贾珍之间的暖昧关系，成为贾府中的一大丑闻，最后早早病逝，她的死也预示着贾府的衰败。</p>
+					</div>
+
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="QinKeqing" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src=".//贾元春.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">贾元春</h2>
+					<div class="card-copy">
+						<h2>贾元春</h2>
+						<h3>判词：二十年来辨是非，榴花开处照宫闱。三春争及初春景，虎兕相逢大梦归。</h3>
+						<p>人物介绍：贾府的大小姐，因才德兼备，被选入宫中做女史，后加封贤德妃，是贾府在宫中的靠山。她的命运关乎贾府兴衰，省亲时看到贾府的奢华，却也流露出深宫生活的孤寂与无奈，归省时所作《题大观园》“衔山抱水建来精，多少工夫筑始成”，尽显尊贵与对家族的牵挂。后在宫中早逝，贾府随之逐渐败落。</p>
+					</div>
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="JiaYuanchun" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src=".//贾巧姐.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">贾巧姐</h2>
+					<div class="card-copy">
+						<h2>贾巧姐</h2>
+						<h3>判词：势败休云贵，家亡莫论亲。偶因济刘氏，巧得遇恩人。</h3>
+						<p>人物介绍：王熙凤与贾琏之女，生于七月初七，刘姥姥给她取名为巧姐。在贾府败落后，她险些被 “狠舅奸兄” 卖入烟花巷，幸得刘姥姥搭救，最后在农村平凡度日。</p>
+					</div>
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="JiaQiaojie" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src=".//贾惜春.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">贾惜春</h2>
+					<div class="card-copy">
+						<h2>贾惜春</h2>
+						<h3>判词：勘破三春景不长，缁衣顿改昔年妆。可怜绣户侯门女，独卧青灯古佛旁。</h3>
+						<p>人物介绍：宁国府贾敬的女儿。她性格孤僻冷漠，善于绘画。目睹贾府的衰落和姐妹们的不幸，心灰意冷，最终选择出家为尼，缁衣乞食，在青灯古佛旁度过余生。</p>
+					</div>
+
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="JiaXichun" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src=".//贾探春.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">贾探春</h2>
+					<div class="card-copy">
+						<h2>贾探春</h2>
+						<h3>判词：才自精明志自高，生于末世运偏消。清明涕送江边望，千里东风一梦遥。</h3>
+						<p>人物介绍：贾政与赵姨娘之女，精明能干，富有心机，有 “玫瑰花” 之诨名。她工诗善书，且具有出色的管理才能，曾在王熙凤患病期间代管荣国府，进行了一系列改革，兴利除弊。诗才不凡，《咏白海棠》“玉是精神难比洁，雪为肌骨易销魂” 可见功底。但最终远嫁他乡，一去难返。</p>
+					</div>
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="JiaTanchun" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-background border-outer">
+			<div class="border-inner">
+				<img src="./贾迎春.png" />
+			</div>
+		</div>
+		<div class="card-content border-outer">
+			<div class="border-inner">
+				<div class="card-content-layout">
+					<h2 class="vertical-title">贾迎春</h2>
+					<div class="card-copy">
+						<h2>贾迎春</h2>
+						<h3>判词：子系中山狼，得志便猖狂。金闺花柳质，一载赴黄粱。</h3>
+						<p>人物介绍：贾赦与妾室所生之女，老实无能，懦弱怕事，有 “二木头” 的诨名。她的攒珠累丝金凤首饰被下人拿去赌钱，她也不敢追究。父亲贾赦为了抵债，将她嫁给孙绍祖，婚后受尽虐待，一年后便被折磨致死。</p>
+					</div>
+				</div>
+				<label class="toggle">
+					<input type="radio" name="accordion" id="JiaYingchun" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</svg>
+				</label>
+
+			</div>
+		</div>
+	</div>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
