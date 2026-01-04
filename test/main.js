@@ -49,7 +49,7 @@ const questions = [
 const roles = {
   daiyu: {
     name: "林黛玉",
-    img: "/shierchai/lindaiyu.png",
+    img: "https://raw.githubusercontent.com/fishyu77/honglou-yimeng/main/shierchai/lindaiyu.png",
     desc: `
       <strong>判词：</strong><br>
       情深不寿，慧极必伤。<br>
@@ -83,7 +83,7 @@ const roles = {
   },
   baoyu: {
     name: "贾宝玉",
-    img: "/shierchai/jiabaoyu.png",
+    img: "https://raw.githubusercontent.com/fishyu77/honglou-yimeng/main/shierchai/jiabaoyu.png",
     desc: `
       <strong>判词：</strong><br>
       你厌恶功名，却身处其中。<br>
