@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Serif SC', serif;
+    background-color: #741b1b; /* 深红色背景，还原截图效果 */
+    color: #ffffff;
+    overflow: hidden; /* 强制单屏不滚动 */
+}
+
+/* ===== 核心单页切换逻辑 ===== */
+.page {
+    display: none; /* 默认隐藏所有页面 */
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center; /* 恢复垂直居中 */
+    align-items: center;
+    text-align: center;
+    padding: 2vh 20px; /* 压缩上下内边距 */
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page.active {
+    display: flex;
+    opacity: 1;
+    z-index: 10;
+}
+
+/* ===== 通用排版样式 ===== */
+h1 {
+    font-size: 2rem; /* 减小字号 */
+    margin-bottom: 2vh;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-size: 1.5rem; /* 减小字号 */
+    margin-bottom: 2vh;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5vh;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.intro {
+    margin-bottom: 3vh;
+    font-size: 1.1rem;
+}
+
+.hint {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 4vh;
+}
+
+/* ===== 按钮系统 ===== */
+button {
+    background-color: #cbbba0; /* 金色/卡其色背景 */
+    color: #3e2723; /* 深褐色文字 */
+    border: none;
+    padding: 1.5vh 3vw; /* 响应式 padding */
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 2vh;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: #e0d0b6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* 选项按钮组 */
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 2vh;
+}
+
+#options button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 0;
+    text-align: left;
+    padding: 2vh 25px;
+    font-size: 1rem;
+    font-weight: normal;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+#options button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+    transform: translateX(5px);
+}
+
+/* ===== 结果页特定样式 ===== */
+.role-img {
+    height: 20vh; /* 使用视口高度控制图片大小 */
+    width: auto;
+    border-radius: 8px;
+    margin: 1.5vh 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    border: 2px solid rgba(255,255,255,0.2);
+    background-color: #fff; /* 防止图片透明背景问题 */
+    padding: 5px;
+    flex-shrink: 0; /* 防止图片被压缩 */
+}
+
+.role-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1vh;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+#roleDesc {
+    text-align: center;
+    margin-bottom: 2vh;
+    font-size: 0.9rem; /* 减小字号 */
+    background: rgba(0,0,0,0.2);
+    padding: 1.5vh 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width: 600px; /* 限制最大宽度 */
+    overflow-y: auto; /* 仅当文字内容实在太多时，内部允许微滚动 */
+    max-height: 40vh; /* 限制描述区域最大高度 */
+}
+
+#roleDesc strong {
+    color: #ffeb3b; /* 亮黄色强调 */
+    display: block;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+    font-size: 1rem;
+}
+
+/* 隐藏 roleDesc 内部滚动条 */
+#roleDesc::-webkit-scrollbar {
+    width: 4px;
+}
+#roleDesc::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+}
+
+/* ===== 结局页 ===== */
+.ending-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.silent-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.8);
+    box-shadow: none;
+}
+
+.silent-btn:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border-color: #fff;
+}
+
+/* ===== 进度指示 ===== */
+#progress {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+/* 适配移动端 */
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    .role-img { width: 160px; }
+    #options button { padding: 15px; }
+    .page { padding: 15px; }
+}
+
+/* ===== 沉默结局特效 ===== */
+.ending {
+    transition: background-color 3s ease;
+}
+
+.ending.dark {
+    background-color: #000000 !important; /* 强制变黑 */
+    z-index: 100; /* 确保覆盖其他层 */
+}
+
+/* 让文字也逐渐变暗消失 */
+.ending.dark .ending-silence {
+    opacity: 0;
+    transition: opacity 5s ease-in 2s; /* 延迟2秒后开始消失，持续5秒 */
+}
+
+.ending-silence-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ending-silence {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,152 +1,159 @@
-/* 基础样式与字体配置 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+
+:root {
+	--color-background: #8E0000;
+	--color-text: #fff;
+}
 
 body {
-    font-family: 'Noto Serif SC', serif;
-    background-color: #F5F0E6; /* 宣纸米白色 */
-    color: #1A1A1A; /* 墨黑色文字 */
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b0000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    line-height: 1.6;
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: monospace;
+	line-height: 1.5;
+}
+h2 {
+	font-size: 1.5rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+h3 {
+	font-size: 0.6rem;
+	font-weight: 400;
+}
+img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
-/* 传统纹样边框系统 */
-.traditional-border {
-    position: relative;
-    border: 1px solid #8B0000; /* 朱红主边框 */
-    border-radius: 4px;
+/* Return Link Styles */
+
+.border-outer,
+.border-inner {
+	clip-path: polygon(
+		/* left, top edge */ var(--corner-size) 0%,
+		/* right, top edge */ calc(100% - var(--corner-size)) 0%,
+		/* right edge, top */ 100% var(--corner-size),
+		/* right edge, bottom */ 100% calc(100% - var(--corner-size)),
+		/* right, bottom edge */ calc(100% - var(--corner-size)) 100%,
+		/* left, bottom edge */ var(--corner-size) 100%,
+		/* left edge, bottom */ 0% calc(100% - var(--corner-size)),
+		/* left edge, top */ 0% var(--corner-size)
+	);
+}
+.border-outer {
+	background: var(--color-text);
+	padding: var(--border-width);
+	display: flex;
+	flex-direction: column;
+}
+.border-inner {
+	flex-grow: 1;
+	background: var(--color-background);
+}
+.cards {
+	display: flex;
+	min-height: 100dvh;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
-.traditional-border::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    border: 1px solid #8B0000; /* 外层虚化边框 */
-    opacity: 0.3;
-    pointer-events: none;
-    border-radius: 8px;
+.card {
+	--corner-size: 1.75rem;
+	--border-width: 1px;
+	--image-column-width: 8rem;
+	--content-width: 19rem;
+	display: grid;
+	position: relative;
+	grid-template-columns: var(--image-column-width) calc(2 * var(--corner-size));
+	transition: grid-template-columns 450ms ease 50ms;
+	height: 28rem;
+	overflow:clip;
+	> * {
+		min-width: 0;
+		grid-row: 1;
+	}
+}
+.card-background {
+	grid-column: 1 / -1;
+	img {
+		height: 100%;
+		object-fit: cover;
+		width: calc(var(--image-column-width) + var(--corner-size));
+	}
+}
+.card-content {
+	grid-column: 2;
+	position: relative;
+}
+.card-copy {
 }
 
-/* 传统纹样背景 */
-.cloud-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,40 Q40,20 60,30 Q80,20 90,40 Q80,60 60,50 Q40,60 30,40 Z' fill='none' stroke='%238b0000' stroke-width='0.5' stroke-opacity='0.2'/%3E%3C/svg%3E");
-    background-repeat: repeat;
+.card-content-layout {
+	display: flex;
+	gap: 2rem;
+	position: absolute;
+	top: var(--corner-size);
+	left: var(--corner-size);
+	height: calc(100% - 6rem);
+	width: var(--content-width);
+	translate: -1rem 0;
+	transition: translate 450ms;
+}
+.card-copy {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+h2.vertical-title {
+	writing-mode: vertical-lr;
 }
 
-.key-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='10' viewBox='0 0 40 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,5 L5,0 L10,5 L15,0 L20,5 L25,0 L30,5 L35,0 L40,5 L35,10 L30,5 L25,10 L20,5 L15,10 L10,5 L5,10 L0,5 Z' fill='none' stroke='%238b0000' stroke-width='0.5' stroke-opacity='0.2'/%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    height: 10px;
+.toggle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	input {
+		display: none;
+	}
+	svg {
+		transition: rotate 250ms;
+	}
 }
 
-/* 交互组件样式 */
-.pulse-glow {
-    animation: pulse 2s infinite;
+.card:has(input:checked) {
+	grid-template-columns: var(--image-column-width) var(--content-width);
+	.card-content-layout {
+		translate: -4rem 0;
+	}
 }
 
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(139, 0, 0, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(139, 0, 0, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(139, 0, 0, 0); }
+input:checked + svg {
+	line-height: 1;
+	rotate: 45deg;
+}
+.garden-back {
+  position: fixed;
+  bottom: 22px;
+  left: 26px;
+  font-family: "宋体", "Noto Serif SC", serif;
+  color: var(--color-text);
+  text-decoration: none;
+  z-index: 999;
+  transition: transform 0.3s ease;
 }
 
-.collapse-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-}
-
-.collapse-content.active {
-    max-height: 500px;
-    transition: max-height 0.8s ease-in;
-}
-
-/* 滚动与导航样式 */
-.progress-container {
-    height: 3px;
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.progress-bar {
-    height: 3px;
-    background: #8B0000;
-    width: 0%;
-}
-
-.nav-item.active {
-    color: #8B0000;
-    font-weight: 600;
-    border-bottom: 2px solid #8B0000;
-}
-
-/* 动画效果 */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .text-lg {
-        font-size: 1rem;
-    }
-    
-    .text-xl {
-        font-size: 1.25rem;
-    }
-    
-    .text-2xl {
-        font-size: 1.5rem;
-    }
-    
-    .text-3xl {
-        font-size: 1.75rem;
-    }
-    
-    .p-8 {
-        padding: 1rem;
-    }
-    
-    .px-6 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
-
-/* 装饰性元素 */
-.scroll-decoration {
-    position: absolute;
-    opacity: 0.05;
-    pointer-events: none;
-}
-
-/* 引用样式 */
-.quote {
-    position: relative;
-    border-left: 3px solid #8B0000;
-    padding-left: 1.5rem;
-    font-style: italic;
-}
-
-.quote::before {
-    content: '"';
-    position: absolute;
-    left: -1rem;
-    top: -0.5rem;
-    font-size: 4rem;
-    color: #8B0000;
-    opacity: 0.2;
+.garden-back:hover {
+  transform: scale(1.05);
 }
