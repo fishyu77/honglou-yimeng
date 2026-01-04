@@ -66,7 +66,7 @@ const roles = {
   },
   baochai: {
     name: "薛宝钗",
-    img: "../shierchai/薛宝钗.png",
+    img: "../shierchai/xuebaochai.png",
     desc: `
       <strong>判词：</strong><br>
       人皆称你稳妥圆融，却少有人问你是否甘心。<br>
