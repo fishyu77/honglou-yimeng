@@ -83,7 +83,7 @@ const roles = {
   },
   baoyu: {
     name: "贾宝玉",
-    img: "../shierchai/jiabaoyu.png",
+    img: "/shierchai/jiabaoyu.png",
     desc: `
       <strong>判词：</strong><br>
       你厌恶功名，却身处其中。<br>
@@ -100,7 +100,7 @@ const roles = {
   },
   fengjie: {
     name: "王熙凤",
-    img: "../shierchai/wangxifeng.png",
+    img: "/shierchai/wangxifeng.png",
     desc: `
       <strong>判词：</strong><br>
       心狠手稳，最像赢家，<br>
