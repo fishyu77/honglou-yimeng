@@ -83,7 +83,7 @@ const roles = {
   },
   baoyu: {
     name: "贾宝玉",
-    img: "https://raw.githubusercontent.com/fishyu77/honglou-yimeng/main/shierchai/jiabaoyu.png",
+    img: "../shierchai/jiabaoyu.png",
     desc: `
       <strong>判词：</strong><br>
       你厌恶功名，却身处其中。<br>
